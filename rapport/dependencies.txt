@@ -1,0 +1,5 @@
+Pour compiler le fichier de rapport (make rapport), exécuter au préalable :
+	- sudo apt install texlive-latex-base
+	- sudo apt-get install texlive-science
+	- sudo apt-get install make
+	- sudo apt-get install texlive-bibtex-extra

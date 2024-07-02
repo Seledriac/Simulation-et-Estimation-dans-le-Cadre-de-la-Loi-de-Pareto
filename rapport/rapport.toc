@@ -1,0 +1,17 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\contentsline {section}{\numberline {2}Partie théorique : étude mathématique}{3}%
+\contentsline {subsection}{\numberline {2.1}Étude probabiliste}{3}%
+\contentsline {subsection}{\numberline {2.2}Simulation d'une valeur d'une variable de loi de Pareto}{6}%
+\contentsline {subsection}{\numberline {2.3}Étude statistique}{7}%
+\contentsline {subsection}{\numberline {2.4}Récapitulatif de la partie mathématique}{10}%
+\contentsline {section}{\numberline {3}Résultats numériques}{11}%
+\contentsline {subsection}{\numberline {3.1}Simulation de la loi de Pareto}{11}%
+\contentsline {subsection}{\numberline {3.2}Estimation du paramètre $\alpha $}{13}%
+\contentsline {subsubsection}{\numberline {3.2.1}Graphique d'évolution de l'estimateur}{13}%
+\contentsline {subsubsection}{\numberline {3.2.2}Boîtes à moustaches}{15}%
+\contentsline {section}{\numberline {4}Conclusion}{18}%
+\contentsline {section}{\numberline {5}Bibliographie}{18}%
+\contentsline {section}{\numberline {6}Annexe}{19}%
+\contentsline {subsection}{\numberline {6.1}Figures}{19}%
+\contentsline {subsection}{\numberline {6.2}Listing du programme R}{26}%

@@ -1,0 +1,1359 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+2 Partie théorique : étude mathématique
+\end_layout
+
+\begin_layout Subsection*
+2.1/ Etude probabiliste
+\end_layout
+
+\begin_layout Standard
+1.
+ Soient 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ et 
+\begin_inset Formula $\theta$
+\end_inset
+
+ deux réels strictements positifs.
+ Déterminer le réel 
+\begin_inset Formula $C$
+\end_inset
+
+ pour que la fonction : 
+\begin_inset Formula $x\rightarrow\begin{cases}
+\frac{C}{x^{\alpha+1}} & si\ x\geq\theta\\
+0 & sinon.
+\end{cases}$
+\end_inset
+
+ soit une densité de probabilité.
+\end_layout
+
+\begin_layout Standard
+On sait que 
+\begin_inset Formula $f$
+\end_inset
+
+ est une densité si :
+\begin_inset Formula 
+\begin{align*}
+\int_{-\infty}^{+\infty}f(t)dt & =1\Leftrightarrow\int_{\theta}^{+\infty}\frac{C}{x^{\alpha+1}}dx=1\\
+\Leftrightarrow & C\int_{\theta}^{+\infty}\frac{1}{x^{\alpha+1}}dx=1\\
+\Leftrightarrow & C[\frac{-1}{\alpha x^{\alpha}}]_{\theta}^{+\infty}=1\\
+\Leftrightarrow & \frac{C}{\alpha\theta^{\alpha}}=1\\
+\Leftrightarrow & C=\alpha\theta^{\alpha}
+\end{align*}
+
+\end_inset
+
+On obtient que :
+\begin_inset Formula $f(x)=\begin{cases}
+\frac{\alpha}{\theta}(\frac{\theta}{x})^{\alpha+1} & si\ x\geq\theta\\
+0 & sinon
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Dans toute la suite, on notera cette densité 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Définition
+\series default
+ : On dit que la variable aléatoire X suit une loi de Pareto de paramètres
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ et 
+\begin_inset Formula $\theta$
+\end_inset
+
+ si et seulement si sa densité est 
+\begin_inset Formula $f.$
+\end_inset
+
+ On notera alors 
+\begin_inset Formula $X\sim P(\alpha,\theta).$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Dans ce qui suit, X désignera une variable aléatoire de loi 
+\begin_inset Formula $P(\alpha,\theta)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+2.
+ Dans quelle contexte cette loi est-elle utilisée? Donner des exemples de
+ modélisation avec une telle loi.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Après quelques recherches, on apprend que cette loi est utilisé en économie
+ principalement.
+ Elle est néanmoins très discutée car beaucoup la trouvent trop imprécise.
+ A l'aide de la loi de Pareto on peut notemment modeliser de la gestion
+ de stock, de ventes, de projet ou de production.
+ On appelle aussi cette loi la loi des 80-20 car elle permet d'observer
+ que 80% des effets sont le produit de seulement 20% des causes.
+ En effet, si on modélise un problème comme étant causé par les valeurs
+ que peuvent prendre X, on voit qu'après 
+\begin_inset Formula $\theta$
+\end_inset
+
+, approximativement 20% des valeurs de cause constituent 80% de l'intégrale
+ de la densité de probabilité du problème (voir figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schema-densite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ On peut généraliser ce raisonnement pour différentes valeurs de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ (on a alors différentes proportions que 80/20).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Densité de loi de Pareto schématisée
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:schema-densite"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/tboumba/Bureau/pareto.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+3.
+ A quelle condition la variable X posède-t-elle une espérance ? une variance
+ ? On se placera sous cette dernière condition dans la suite.
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+X admet une espérance si :
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{align*}
+ & \int_{-\infty}^{+\infty}|x|f(x)dx\ converge\\
+\Leftrightarrow & \int_{\theta}^{+\infty}|x|\frac{\alpha}{\theta}(\frac{\theta}{x})^{\alpha+1}dx=\theta^{\alpha}\alpha\int_{\theta}^{+\infty}\frac{1}{x^{\alpha}}dx\ \ \ \ ,(\theta>0\Leftrightarrow|x|=x)\ converge\\
+\Leftrightarrow\  & \alpha>1\ (Intégrale\ de\ Riemann)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+X admet une espérance si 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+ et cette espérance vaut :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E(X)=\int_{-\infty}^{+\infty}xf(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+X admet une variance si X admet une espérance et si :
+\begin_inset Formula 
+\begin{align*}
+ & \int_{-\infty}^{+\infty}(x-E(X))^{2}f(x)dx\ converge\\
+\Leftrightarrow & \int_{\theta}^{+\infty}x^{2}f(x)dx+E(X)^{2}\int_{\theta}^{+\infty}f(x)dx-2E(X)\underset{E(X)}{\underbrace{\int_{\theta}^{+\infty}xf(x)dx}}=\int_{\theta}^{+\infty}x^{2}f(x)dx-E(X)^{2}\ converge\\
+\Leftrightarrow & \int_{\theta}^{+\infty}x^{2}f(x)dx\ converge\\
+\Leftrightarrow & \theta^{\alpha}\alpha\int_{\theta}^{+\infty}\frac{1}{x^{\alpha-1}}\ converge\\
+\Leftrightarrow & \ \alpha-1>1\ (Intégrale\ de\ Riemman)\\
+\Leftrightarrow & \,\alpha>2
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+X admet une variance si 
+\begin_inset Formula $\alpha>2$
+\end_inset
+
+ et cette variance vaut :
+\begin_inset Formula 
+\[
+V(X)=\int_{-\infty}^{+\infty}(x-E(x))^{2}f(x)dx=E(X^{2})-E(X)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Calculer l'espérance et la variance de X.
+\end_layout
+
+\begin_layout Itemize
+Calcul de l'espérance :
+\begin_inset Formula 
+\begin{align*}
+E(X) & =\theta^{\alpha}\alpha\int_{\theta}^{+\infty}\frac{1}{x^{\alpha}}dx\\
+= & \theta^{\alpha}\alpha[\frac{-1}{(\alpha-1)x^{\alpha-1}}]_{\theta}^{+\infty}\\
+= & \theta^{\alpha}\alpha\frac{1}{(\alpha-1)\theta^{\alpha-1}}\\
+= & \frac{\theta\alpha}{(\alpha-1)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Calcul de la variance :
+\begin_inset Formula 
+\begin{align*}
+V(x)= & E(X^{2})-E(X)^{2}\\
+E(X^{2})= & \frac{\theta^{2}\alpha}{(\alpha-2)}\\
+V(X)= & \frac{\theta^{2}\alpha}{(\alpha-2)}-\frac{\theta^{2}\alpha^{2}}{(\alpha-1)^{2}}\\
+V(X)= & \frac{\theta^{2}\alpha(\alpha-1)^{2}-\theta^{2}\alpha^{2}(\alpha-2)}{(\alpha-1)^{2}(\alpha-2)}\\
+V(X)= & \frac{\alpha\theta^{2}}{(\alpha-1)^{2}(\alpha-2)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ Calculer la fonction de répartition F de X.
+\end_layout
+
+\begin_layout Standard
+La fonction de répartition, notée 
+\begin_inset Formula $F_{X}(x)$
+\end_inset
+
+ se calcule suivant la formule suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F_{X}(x)= & P(X\leq x)=\int_{-\infty}^{x}f(t)dt\\
+= & \begin{cases}
+0 & si\ x<\theta\\
+\int_{\theta}^{x}\frac{\alpha}{\theta}(\frac{\theta}{t})^{\alpha+1}dt & si\ x\geq\theta
+\end{cases}\\
+= & \begin{cases}
+0 & si\ x<\theta\\
+\alpha\theta^{\alpha}[\frac{-1}{\alpha t^{\alpha}}]_{\theta}^{x}=\frac{\bcancel{\alpha\theta^{\alpha}}}{\bcancel{\alpha\theta^{\alpha}}}-\frac{\bcancel{\alpha}\theta^{\alpha}}{\bcancel{\alpha}x^{\alpha}} & si\ x\geq\theta
+\end{cases}\\
+= & \begin{cases}
+0 & si\ x<\theta\\
+1-(\frac{\theta}{x})^{\alpha} & si\ x\geq\theta
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+6.
+ Déterminer la fonction réciproque de F.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+y= & 1-(\frac{\theta}{x})^{\alpha}\\
+(\frac{\theta}{x})^{\alpha}= & 1-y\\
+x^{\alpha}= & \frac{\theta^{\alpha}}{1-y}\\
+x= & \frac{\theta}{(1-y)^{1/\alpha}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a donc : 
+\begin_inset Formula 
+\[
+F^{-1}(x)=\frac{\theta}{(1-x)^{1/\alpha}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2.2/ Simulation d'une valeur d'une variable de loi de Pareto
+\end_layout
+
+\begin_layout Standard
+L’objet de ce paragraphe est de proposer une méthode de construction d’une
+ valeur d’une variable aléatoire de loi P(
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\theta$
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+7.
+ Expliquer de manière formelle comment simuler une valeur d’une variable
+ aléatoire de loi P(
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\theta$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+On va appliquer la méthode d'inversion.
+ 
+\end_layout
+
+\begin_layout Standard
+Soit X une variable réelle de loi continue et strictement croissante.
+ Alors si U est de loi uniforme sur [0,1], la variable 
+\begin_inset Formula $F^{-1}(U)$
+\end_inset
+
+ a la même loi que X.
+\end_layout
+
+\begin_layout Standard
+Dans le cadre de la loi de Pareto :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+F(\theta^{-})=0\\
+F(\theta)=1-(\frac{\theta}{\theta})^{\alpha}=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc F est continue en 
+\begin_inset Formula $\theta$
+\end_inset
+
+, de plus F est continue de manière triviale sur 
+\begin_inset Formula $\mathbb{R}\backslash\{\theta\},$
+\end_inset
+
+donc F est continue sur 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+F est également strictement croissante sur 
+\begin_inset Formula $[\theta,+\infty[$
+\end_inset
+
+ de manière évidente.
+\end_layout
+
+\begin_layout Standard
+On peut donc appliquer la méthode d'inversion à la loi de Pareto pour en
+ simuler une valeur 
+\begin_inset Formula $x$
+\end_inset
+
+ en simulant une réalisation u de U et en posant 
+\begin_inset Formula $x=F^{-1}(u)=\frac{\theta}{(1-u)^{1/\alpha}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+2.3/ Etude statistique
+\end_layout
+
+\begin_layout Standard
+On considère 
+\begin_inset Formula $n$
+\end_inset
+
+ données réelles 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}.$
+\end_inset
+
+ On fait l'hypothèse que ces données sont les réalisations de 
+\begin_inset Formula $n$
+\end_inset
+
+ variables aléatoires 
+\begin_inset Formula $X_{1},X_{2},...,X_{n},$
+\end_inset
+
+indépendantes et de même loi 
+\begin_inset Formula $P(\alpha,\theta=1).$
+\end_inset
+
+ On suppose que le paramètre 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ est inconu et on s'intéresse au problème de son estimation par la méthode
+ du maximum de vraisemblance.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+8.
+ Ecrire la log-vraisemblance de l’échantillon et trouver l’estimation du
+ maximum de vraisemblance de 
+\begin_inset Formula $α$
+\end_inset
+
+.
+ En déduire alors l’estimateur du maximum de vraisemblance du paramètre
+ 
+\begin_inset Formula $α$
+\end_inset
+
+.
+ On le notera 
+\begin_inset Formula $\widehat{α}_{n}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+L(x,\alpha)= & \prod_{j=1}^{n}\alpha(\frac{1}{x_{j}})^{\alpha+1}\\
+log(L(x,\alpha))= & nln(\alpha)-\sum_{j=1}^{n}(\alpha+1)ln(x_{j})\\
+= & nln(\alpha)-(\alpha+1)s_{n}\ avec\ s_{n}=\sum_{j=1}^{n}ln(x_{j})\\
+t_{n}= & arg\ \underset{z\in[1,+\infty]}{max(LL(x,z))}\\
+g(z)= & nln(z)-(z+1)s_{n}\\
+g^{\prime}(z)= & \frac{n}{z}-s_{n}\\
+g^{\prime\prime}(z)= & \frac{-n}{z^{2}}
+\end{align*}
+
+\end_inset
+
+Donc 
+\begin_inset Formula $g^{\prime}(z)=0\Leftrightarrow z=\frac{n}{s_{n}}$
+\end_inset
+
+ et 
+\begin_inset Formula $g^{\prime\prime}(z)<0.$
+\end_inset
+
+ L'unique valeur 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ qui maximise la vraisemblance sachant
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ est donc égale à 
+\begin_inset Formula $t_{n}=\frac{n}{s_{n}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+On peut alors construire un estimateur du maximum de vraisemblance de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ noté 
+\begin_inset Formula $\widehat{α}_{n}$
+\end_inset
+
+: 
+\begin_inset Formula $\widehat{α}_{n}=\frac{n}{\sum_{j=1}^{n}log(X_{j})}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+9.
+ Calculer 
+\begin_inset Formula $E[log(X_{1})]$
+\end_inset
+
+ et 
+\begin_inset Formula $Var(log(X_{1})).$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E(log(X_{1}))= & \int_{1}^{+\infty}\alpha ln(x)(\frac{1}{x}){}^{\alpha+1}dx\\
+= & \alpha\int_{1}^{+\infty}ln(x)(\frac{1}{x})^{\alpha+1}dx\\
+\text{On va procéder par intégration par parties :} & u(x)=ln(x),u^{\prime}(x)=\frac{1}{x},v^{\prime}(x)=\frac{1}{x^{\alpha+1}},v(x)=\frac{-1}{\alpha x^{\alpha}}\\
+\int_{1}^{+\infty}ln(x)(\frac{1}{x})^{\alpha+1}dx= & [\frac{-ln(x)}{\alpha x^{\alpha}}]_{1}^{+\infty}+\int_{1}^{+\infty}\frac{1}{\alpha x^{\alpha+1}}dx\\
+= & 0+[\frac{-1}{\alpha^{2}x^{\alpha}}]_{1}^{+\infty}=\frac{1}{\alpha^{2}}\\
+\text{donc \ensuremath{E(log(X_{1}))=}} & \frac{1}{\alpha}
+\end{align*}
+
+\end_inset
+
+Calcul de 
+\begin_inset Formula $Var(log(X_{1}))$
+\end_inset
+
+ :
+\begin_inset Formula 
+\begin{align*}
+Var(log(X_{1}))= & E((log(X_{1}))^{2})-E(log(X_{1}))^{2}\\
+E((log(X_{1}))^{2})= & \alpha\int_{1}^{+\infty}ln^{2}(x)(\frac{1}{x})^{\alpha+1}dx\\
+= & \underset{0}{\alpha(\underbrace{[\frac{-ln^{2}(x)}{\alpha x^{\alpha}}]_{1}^{+\infty}}}+\int_{1}^{+\infty}\frac{2ln(x)}{\alpha x^{\alpha+1}}dx)\\
+= & \frac{2}{\alpha^{2}}\\
+Var(log(X_{1}))= & \frac{1}{\alpha^{2}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+10.
+ Proposer un estimateur sans biais et convergent du paramètre 
+\begin_inset Formula $\beta=\frac{1}{\alpha}$
+\end_inset
+
+.
+ On notera cet estimateur 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+et 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+sa réalisation.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{n}=\frac{1}{n}\sum_{i=1}^{+\infty}log(X_{i})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ est un estimateur du paramètre 
+\begin_inset Formula $\beta=\frac{1}{\alpha}$
+\end_inset
+
+ sans biais et convergent.
+ En effet, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E(log(X_{1}))=\frac{1}{\alpha}$
+\end_inset
+
+ donc par linéarité de l'espérance, on a
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E(B_{n})=\frac{\bcancel{n}}{\bcancel{n}}\beta=\beta
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+De même, puisque les variables 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ indépendantes, on a la linéarité de la variance de leur somme, donc
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Var(B_{n})=\frac{n}{n^{2}}\beta^{2}\rightarrow0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+11.
+ Enoncer le TLC que satisfait cet estimateur.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E(log(X_{1})^{2})<\infty$
+\end_inset
+
+ car la variance de 
+\begin_inset Formula $log(X_{i})$
+\end_inset
+
+ existe.
+ Cette variable admet donc un momet d'ordre 2.
+ 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+vérifie donc le Théorème limite centrale suivant :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{n}(\underset{B_{n}}{\underbrace{\frac{1}{n}\sum_{j=1}^{n}log(X_{i})}}-E(log(X_{i})))\stackrel[n\rightarrow\infty]{\mathcal{L}}{\rightarrow}N(0,Var(log(X_{i})))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{n}(B_{n}-\beta)\stackrel[n\rightarrow\infty]{\mathcal{L}}{\rightarrow}N(0,\beta^{2})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+12.
+ Proposer un estimateur du paramètre 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ On le notera 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{n}=B_{n}^{-1}=\frac{n}{\sum_{i=1}^{n}log(X_{i})}=\widehat{\alpha_{n}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+13.
+ En déduire la convergence de 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+vers 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ et énoncer le TLC que satisfait 
+\begin_inset Formula $A_{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'après la loi forte des grands nombres, on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+B_{n} & \stackrel[n\rightarrow\infty]{p.s}{\rightarrow}\beta\\
+\text{donc }\frac{1}{B_{n}}=A_{n} & \stackrel[n\rightarrow\infty]{p.s}{\rightarrow}\frac{1}{\beta}=\alpha
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{n}$
+\end_inset
+
+converge donc bien vers 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{n}(B_{n}-\beta)\stackrel[n\rightarrow\infty]{\mathcal{L}}{\rightarrow}N(0,\beta^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On utilise la delta-méthode en utilisant 
+\begin_inset Formula $g(x)=\frac{1}{x}$
+\end_inset
+
+, dérivable en 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ de manière évidente (
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{n}(\frac{1}{B_{n}}-\frac{1}{\beta})\stackrel[n\rightarrow\infty]{\mathcal{L}}{\rightarrow}N(0,(-\frac{1}{\beta^{2}})^{2}\beta^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On obtient donc finalement :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{n}(A_{n}-\alpha)\stackrel[n\rightarrow\infty]{\mathcal{L}}{\rightarrow}N(0,\alpha^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2.4 Récapitulatif de la partie mathématique
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fonction de densité
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+\frac{\alpha}{\theta}(\frac{\theta}{x})^{\alpha+1} & si\ x\geq\theta\\
+0 & sinon
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fonction de répartition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+0 & si\ x<\theta\\
+1-(\frac{\theta}{x})^{\alpha} & si\ x\geq\theta
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fonction inverse de la fonction de répartition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F^{-1}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+F^{-1}(x)=\frac{\theta}{(1-x)^{1/\alpha}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Esperance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E(X)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\theta\alpha}{(\alpha-1)}$
+\end_inset
+
+ 
+\begin_inset Formula $(\alpha>1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\alpha\theta^{2}}{(\alpha-1)^{2}(\alpha-2)}$
+\end_inset
+
+
+\begin_inset Formula $(\alpha>2)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estimateur du paramètre 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n}{\sum_{i=1}^{n}log(X_{i})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
